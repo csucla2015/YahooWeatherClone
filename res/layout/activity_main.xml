@@ -1,7 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <com.npi.blureffect.TopCenterImageView
         android:id="@+id/normal_image"
@@ -13,17 +13,22 @@
         android:id="@+id/blurred_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0"/>
+        android:alpha="0"
+        android:src="@drawable/image" />
 
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" 
+        android:layout_height="wrap_content" 
+         android:dividerHeight="1dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="0dp"
+    android:scrollbarStyle="outsideInset"
         android:divider="@null"/>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp" >
+        android:layout_height="wrap_content" >
 
         <com.npi.blureffect.ScrollableImageView
             android:id="@+id/blurred_image_header"
@@ -31,12 +36,13 @@
             android:layout_height="50dp" />
         <TextView 
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="Background blur"
             android:background="@drawable/header"
             android:gravity="center_vertical"
             android:textSize="18sp"
-            android:paddingLeft="10dp"/>
+            android:padding="10dp"
+           />
         <Switch 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

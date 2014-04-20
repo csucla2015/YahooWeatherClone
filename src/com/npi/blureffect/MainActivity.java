@@ -2,6 +2,7 @@ package com.npi.blureffect;
 
 import java.io.File;
 
+
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -80,7 +81,7 @@ public class MainActivity extends Activity {
 					BitmapFactory.Options options = new BitmapFactory.Options();
 					options.inSampleSize = 2;
 					Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.image, options);
-					Bitmap newImg = Blur.fastblur(MainActivity.this, image, 12);
+					Bitmap newImg = Blur.fastblur(MainActivity.this, image, 7);
 					ImageUtils.storeImage(newImg, blurredImage);
 					runOnUiThread(new Runnable() {
 
@@ -104,12 +105,19 @@ public class MainActivity extends Activity {
 		}
 
 		String[] strings = getResources().getStringArray(R.array.list_content);
-
-		// Prepare the header view for our list
+		strings[0]= "Hours : /n Monday : 7:30 am - 11:00 pm \n Tuesday : 7:30 am - 11:00 pm \n Wednesday : 7:30 am - 11:00 pm \n Thursday 7:30 am - 11:00 pm \n Friday 7:30 am - 11:00 pm";
 		headerView = new View(this);
 		headerView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, TOP_HEIGHT));
+
+		// Prepare the header view for our list
+		MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(this, strings);
 		mList.addHeaderView(headerView);
-		mList.setAdapter(new ArrayAdapter<String>(this, R.layout.list_item, strings));
+
+	    mList.setAdapter(adapter);
+		/*headerView = new View(this);
+		headerView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, TOP_HEIGHT));
+		mList.addHeaderView(headerView);		*/
+	    //mList.setAdapter(new ArrayAdapter<String>(this, R.layout.list_item, strings));
 		mList.setOnScrollListener(new OnScrollListener() {
 
 			@Override
