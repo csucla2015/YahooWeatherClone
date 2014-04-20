@@ -80,7 +80,7 @@ public class MainActivity extends Activity {
 					BitmapFactory.Options options = new BitmapFactory.Options();
 					options.inSampleSize = 2;
 					Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.image, options);
-					Bitmap newImg = Blur.fastblur(MainActivity.this, image, 7);
+					Bitmap newImg = Blur.fastblur(MainActivity.this, image, 12);
 					ImageUtils.storeImage(newImg, blurredImage);
 					runOnUiThread(new Runnable() {
 

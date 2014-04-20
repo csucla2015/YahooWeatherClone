@@ -19,10 +19,6 @@
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent" 
-         android:dividerHeight="1dp"
-    android:paddingLeft="10dp"
-    android:paddingRight="0dp"
-    android:scrollbarStyle="outsideInset"
         android:divider="@null"/>
 
     <FrameLayout
@@ -40,8 +36,7 @@
             android:background="@drawable/header"
             android:gravity="center_vertical"
             android:textSize="18sp"
-            android:padding="10dp"
-           />
+            android:paddingLeft="10dp"/>
         <Switch 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
