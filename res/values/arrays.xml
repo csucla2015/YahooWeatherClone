@@ -11,6 +11,14 @@
 	The significance of the voltage is to show it does not give HIGH or LOW. From the data sheet, the minimum output high voltage is 2.7V and maximum output low is 0.5 V. 
 	In addition, the input voltages for minimum and maximum do not fall within range. The voltage measured, 1.4 V is between high and low of input and output voltages because the inverter does not oscillate between high and low. 
  </item>
+         <item>consectetur adipiscing elit. Sed rutrum, </item>
+                <item>consectetur adipiscing elit. Sed rutrum, </item>
+                     <item>consectetur adipiscing elit. Sed rutrum, </item>
+                                <item>consectetur adipiscing elit. Sed rutrum, </item>
+                                     <item>consectetur adipiscing elit. Sed rutrum, </item>
+                                                <item>consectetur adipiscing elit. Sed rutrum, </item>
+                                                     <item>consectetur adipiscing elit. Sed rutrum, </item>
+                                                
     </string-array>
 
 </resources>

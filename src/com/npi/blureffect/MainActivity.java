@@ -22,8 +22,10 @@ import android.widget.Switch;
 public class MainActivity extends Activity {
 
 	private static final String BLURRED_IMG_PATH = "blurred_image.png";
-	private static final int TOP_HEIGHT = 700;
+	private static final int TOP_HEIGHT = 800;
 	private ListView mList;
+	
+	
 	private ImageView mBlurredImage;
 	private View headerView;
 	private ImageView mNormalImage;
@@ -81,7 +83,7 @@ public class MainActivity extends Activity {
 					BitmapFactory.Options options = new BitmapFactory.Options();
 					options.inSampleSize = 2;
 					Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.image, options);
-					Bitmap newImg = Blur.fastblur(MainActivity.this, image, 7);
+					Bitmap newImg = Blur.fastblur(MainActivity.this, image, 20);
 					ImageUtils.storeImage(newImg, blurredImage);
 					runOnUiThread(new Runnable() {
 
@@ -105,12 +107,34 @@ public class MainActivity extends Activity {
 		}
 
 		String[] strings = getResources().getStringArray(R.array.list_content);
-		strings[0]= "Hours : /n Monday : 7:30 am - 11:00 pm \n Tuesday : 7:30 am - 11:00 pm \n Wednesday : 7:30 am - 11:00 pm \n Thursday 7:30 am - 11:00 pm \n Friday 7:30 am - 11:00 pm";
+		String[] headers = new String[10];
+		headers[0] = "Powell Library";
+		headers[2] = "Hours";
+		headers[4] = "Laptop Availability";
+		headers[6] = "Contact";
+		headers[8] = "Room Reservations";
+		strings[0] = "Open Now \nStudy Rooms Available : 9 \nLaptops Available : 10";
+		strings[2]= "Monday : 7:30 am - 11:00 pm \nTuesday : 7:30 am - 11:00 pm \nWednesday : 7:30 am - 11:00 pm \nThursday 7:30 am - 11:00 pm \nFriday 7:30 am - 11:00 pm";
+		strings[4] = "Total Laptops Available = 10";
+		strings[6] = "Under Construction";
+		strings[8] = "Under Construction";
+
+
+		headers[1] = "";
+		headers[3] = "";
+		headers[5] = "";
+		headers[7] = "";
+		headers[9] = "";
+		strings[1] = "";
+		strings[3]= "";
+		strings[5] = "";
+		strings[7] = "";
+		strings[9] = "";
 		headerView = new View(this);
 		headerView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, TOP_HEIGHT));
 
 		// Prepare the header view for our list
-		MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(this, strings);
+		MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(this, strings, headers);
 		mList.addHeaderView(headerView);
 
 	    mList.setAdapter(adapter);
@@ -163,4 +187,5 @@ public class MainActivity extends Activity {
 
 		mBlurredImageHeader.setoriginalImage(bmpBlurred);
 	}
+	
 }
