@@ -4,33 +4,13 @@
     <string-array name="list_content">
         <item> "Lorem ipsum dolor sit amet, </item>
         <item>consectetur adipiscing elit. Sed rutrum, </item>
-        <item>ligula eu fringilla condimentum, </item>
-        <item>lorem augue varius odio, vel sagittis neque nibh porttitor dui. </item>
-        <item>In hac habitasse platea dictumst. </item>
-        <item>Duis a est ultricies, accumsan mi a, </item>
-        <item>pulvinar felis. </item>
-        <item>In hac habitasse platea dictumst. </item>
-        <item>Nullam at accumsan neque, ut dignissim neque. </item>
-        <item>Vivamus suscipit arcu sit amet dignissim feugiat. </item>
-        <item>Sed fringilla metus at ultricies tempus. </item>
-        <item>pulvinar felis. </item>
-        <item>In hac habitasse platea dictumst. </item>
-        <item>Nullam at accumsan neque, ut dignissim neque. </item>
-        <item>Vivamus suscipit arcu sit amet dignissim feugiat. </item>
-        <item>Sed fringilla metus at ultricies tempus. </item>
-        <item>pulvinar felis. </item>
-        <item>In hac habitasse platea dictumst. </item>
-        <item>Nullam at accumsan neque, ut dignissim neque. </item>
-        <item>Vivamus suscipit arcu sit amet dignissim feugiat. </item>
-        <item>Sed fringilla metus at ultricies tempus. </item>
-        <item>pulvinar felis. </item>
-        <item>In hac habitasse platea dictumst. </item>
-        <item>Nullam at accumsan neque, ut dignissim neque. </item>
-        <item>Vivamus suscipit arcu sit amet dignissim feugiat. </item>
-        <item>Sed fringilla metus at ultricies tempus. </item>
-        <item>In lobortis, sem vel rhoncus hendrerit, odio diam rutrum ipsum, ut varius lorem dui at mauris. </item>
-        <item>Vestibulum lobortis et quam non convallis. Phasellus viverra porta nisl, eu luctus erat tincidunt et. </item>
-        <item>Maecenas ac lorem dapibus, dictum turpis quis, blandit mi." </item>
+        <item>The minimum and maximum values obtained for 11 inverters and 17 inverters are fairly close. The minimum voltages were the same but the maximum decreased by 0.1 V. This may be due to the new chip added powered by 5V Vcc. The addition of new inverters might have affected the results. 
+
+	With 1 inverter, the voltage measured was 1.4 V. 
+	
+	The significance of the voltage is to show it does not give HIGH or LOW. From the data sheet, the minimum output high voltage is 2.7V and maximum output low is 0.5 V. 
+	In addition, the input voltages for minimum and maximum do not fall within range. The voltage measured, 1.4 V is between high and low of input and output voltages because the inverter does not oscillate between high and low. 
+ </item>
     </string-array>
 
 </resources>
