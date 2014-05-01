@@ -136,12 +136,12 @@ public class MySimpleArrayAdapter extends ArrayAdapter<String> {
 		}
 		@Override
 		protected String doInBackground(String... params) {	
-			
-		
-			  	String link = "http://www.google.com";
-		
 
-				
+
+			  	String link = "http://www.google.com";
+
+
+
 				 InputStream is = null;
 			     JSONObject jObj = null;
 			     String json = "";
@@ -149,13 +149,13 @@ public class MySimpleArrayAdapter extends ArrayAdapter<String> {
 		            // defaultHttpClient
 		            DefaultHttpClient httpClient = new DefaultHttpClient();
 		            HttpGet get1;
-		          
+
 					 get1 = new HttpGet("http://dev-mobileapi.stashd.org:8000/mwf_laptops?no_server_init");
 
 		            HttpResponse httpResponse = httpClient.execute(get1);
 		            HttpEntity httpEntity = httpResponse.getEntity();
 		            is = httpEntity.getContent();           
-		 
+
 		        } catch (UnsupportedEncodingException e) {
 		            e.printStackTrace();
 		        } catch (ClientProtocolException e) {
@@ -163,7 +163,7 @@ public class MySimpleArrayAdapter extends ArrayAdapter<String> {
 		        } catch (IOException e) {
 		            e.printStackTrace();
 		        }
-		         
+
 		        try {
 		            BufferedReader reader = new BufferedReader(new InputStreamReader(
 		                    is, "iso-8859-1"), 8);
@@ -179,7 +179,7 @@ public class MySimpleArrayAdapter extends ArrayAdapter<String> {
 		        }
 		        Log.v("JOSN",json);
 		        int laptop = json.indexOf("College Library");
-		        
+
 		        String avail = json.substring(laptop, laptop+45);
 		        int hyphen = avail.indexOf("-");
 		        String avail1 = avail.substring(hyphen);
@@ -204,9 +204,9 @@ public class MySimpleArrayAdapter extends ArrayAdapter<String> {
 		        */
 	///////////////////////JUST MAKING THE FIRST REQUEST////////////////////////////////
 				return "meet";
-	
+
 			}	
-		
+
 		}
 
 } 

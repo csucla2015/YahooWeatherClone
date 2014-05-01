@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.npi.blureffect.TopCenterImageView
+        android:id="@+id/normal_imagem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/image3" />
+
+    <com.npi.blureffect.TopCenterImageView
+        android:id="@+id/blurred_imagem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:src="@drawable/image3"
+         />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+         android:dividerHeight="1dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="0dp"
+    android:scrollbarStyle="outsideInset"
+        android:divider="@null"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.npi.blureffect.ScrollableImageView
+            android:id="@+id/blurred_image_header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+    </FrameLayout>
+
+</FrameLayout>
