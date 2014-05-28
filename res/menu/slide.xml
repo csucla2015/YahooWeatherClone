@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	    
+    <item
+        android:id="@+id/homemenu"
+        android:icon="@drawable/ic_menu_home"
+        android:title="Home">
+    </item>
+    <item
+        android:id="@+id/crmenu"
+        android:icon="@drawable/ic_menu_copy_holo_light"
+        android:title="Course Reserves">
+    </item>    
+    <item
+        android:id="@+id/hoursmenu"
+        android:icon="@drawable/ic_menu_recent_history"
+        android:title="Hours">
+    </item>
+    <item
+        android:id="@+id/laptopmenu"
+        android:icon="@drawable/ic_menu_help_holo_light"
+        android:title="Laptop Availability">
+    </item>
+    
+    <item
+        android:id="@+id/contactmenu"
+        android:icon="@drawable/ic_menu_allfriends"
+        android:title="Contact">
+    </item>
+    
+    <item
+        android:id="@+id/feedbackmenu"
+        android:icon="@drawable/ic_menu_notifications"
+        android:title="Feedback">
+    </item>
+    
+    <item
+        android:id="@+id/creditsmenu"
+        android:icon="@drawable/ic_menu_info_details"
+        android:title="Credits">
+    </item>
+      <item
+        android:id="@+id/articlesmenu"
+        android:icon="@drawable/ic_menu_info_details"
+        android:title="Article Search">
+    </item>
+
+</menu>

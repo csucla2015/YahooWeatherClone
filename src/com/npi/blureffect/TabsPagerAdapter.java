@@ -5,10 +5,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
  
 public class TabsPagerAdapter extends FragmentPagerAdapter {
-	
+	Article a = new Article();
 	YRL y = new YRL();
 	Powell p = new Powell();
 	Mgmt m = new Mgmt();
+	Main m1 = new Main();
  
     public TabsPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -19,11 +20,15 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
  
         switch (index) {
         case 0:
-            return y;
+            return m1;
         case 1:
-            return p;
+            return y;
         case 2:
-            return m;
+            return p;
+        case 3:
+        	return m;
+        case 4:
+        	return a;
         }
  
         return null;
@@ -32,7 +37,7 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // get item count - equal to number of tabs
-        return 3;
+        return 5;
     }
  
 }

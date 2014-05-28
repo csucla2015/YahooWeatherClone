@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bruin_blue" >
+
+        
+
+        <ImageButton
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/bruin_blue"
+            android:contentDescription="@string/descr_logo"
+            android:src="@drawable/ucla_header" />
+
+   
+
+ 
+
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingTop="10dp" >
+
+        <Button
+            android:id="@+id/keywordButton"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/result_btn_height"
+            android:layout_weight="1"
+        android:background="@color/black"
+            android:onClick="clickKeyword"
+            android:text="@string/result_keyword"
+            android:textColor="@color/white"
+            android:textSize="@dimen/result_btn_txt" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/descr_separator"
+            android:src="@drawable/separator" />
+
+        <Button
+            android:id="@+id/titleButton"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/result_btn_height"
+            android:layout_weight="1"
+        android:background="@color/black"
+            android:onClick="clickTitle"
+            android:text="@string/result_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/result_btn_txt" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/descr_separator"
+            android:src="@drawable/separator" />
+
+        <Button
+            android:id="@+id/authorButton"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/result_btn_height"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:onClick="clickAuthor"
+            android:text="@string/result_author"
+            android:textColor="@color/white"
+            android:textSize="@dimen/result_btn_txt" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/descr_separator"
+            android:src="@drawable/separator" />
+
+        <Button
+            android:id="@+id/subjectButton"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/result_btn_height"
+            android:layout_weight="1"
+        android:background="@color/black"
+            android:onClick="clickSubject"
+            android:text="@string/result_subject"
+            android:textColor="@color/white"
+            android:textSize="@dimen/result_btn_txt" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bruin_blue"
+        android:text=""
+        android:textSize="1dp"
+        android:typeface="serif" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/image2" >
+
+        <LinearLayout
+            android:id="@+id/resultLinLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/no_results"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="17dp"
+                android:textColor="@color/dark_gray"
+                android:textSize="14dp"
+                android:visibility="gone" />
+
+        
+
+    
+    <com.npi.blureffect.EndlessListView android:id="@+id/el"
+        	android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"  />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

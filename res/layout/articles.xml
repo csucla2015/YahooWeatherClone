@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#3D7EA2" >
+
+       <ImageButton
+            android:id="@+id/actionbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/bruin_blue"
+            android:contentDescription="@string/descr_logo"
+            android:gravity="left"
+            android:src="@drawable/menu_states" />
+
+        <ImageButton
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/actionbar"
+            android:background="@color/bruin_blue"
+            android:contentDescription="@string/descr_logo"
+            android:src="@drawable/ucla_header" />
+
+        <ImageButton
+            android:id="@+id/clearText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/actionbar"
+            android:background="@color/bruin_blue"
+            android:src="@drawable/clear_text"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/searchBar"
+            style="@style/EditTextHoloDark"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/searchIconBtn"
+            android:layout_toRightOf="@+id/clearText"
+            android:gravity="right"
+            android:hint="@string/hint_text"
+            android:paddingLeft="17dp"
+            android:singleLine="True"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/searchIconBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/bruin_blue"
+            android:contentDescription="@string/descr_search"
+            android:gravity="right"
+            android:onClick="OnSearchButtonClick"
+            android:paddingBottom="3dp"
+            android:paddingRight="17dp"
+            android:paddingTop="3dp"
+            android:src="@drawable/search_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/library_bg"
+        android:orientation="vertical"
+        android:padding="19dp" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tab_bg_gray"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:padding="17dp" >
+        <AutoCompleteTextView
+            android:id="@+id/search"
+            style="@style/EditTextHoloLight"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/hint_text"
+            android:singleLine="True" />
+        <Button
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descr_search" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+            
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="University of California \u00A9 2013 UC Regents"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/simul8logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:src="@drawable/s8logo" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

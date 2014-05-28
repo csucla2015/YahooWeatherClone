@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white1"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bruin_blue" >
+
+        <ImageButton
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/bruin_blue"
+            android:contentDescription="@string/descr_logo"
+            android:gravity="left"
+            android:src="@drawable/ucla_header" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:padding="17dp" >
+
+        <AutoCompleteTextView
+            android:id="@+id/search"
+            style="@style/EditTextHoloLight"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+			android:textColor="#ffffff"
+            android:layout_weight="1"
+            android:hint="@string/hint_text"
+			android:textColorHint="#FFFFFF"
+			android:textCursorDrawable="@drawable/color_cursor"
+            android:singleLine="True" />
+        <ImageButton
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+	android:background="@null"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/descr_search"
+            android:gravity="right"
+            android:onClick="OnSearchButtonClick"
+            android:paddingBottom="3dp"
+            android:paddingRight="17dp"
+            android:paddingTop="3dp"
+            android:src="@drawable/search_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/image2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:weightSum="12" >
+
+        <!-- <Button
+            android:id="@+id/courseReservesBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:text="@string/main_cr"
+            android:textColor="@drawable/buttontext"
+            android:textSize="@dimen/main_btn_txt"
+            android:textStyle="bold" /> -->
+            
+         
+            <ImageButton
+                android:id="@+id/arrows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/descr_search"
+                android:gravity="right"
+                android:onClick="OnSearchButtonClick"
+                android:paddingBottom="3dp"
+                android:paddingRight="17dp"
+                android:paddingTop="3dp"
+                android:src="@drawable/arrows" />
+        <!-- <Button
+            android:id="@+id/hours"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:text="@string/main_hours"
+            android:textColor="@drawable/buttontext"
+            android:textSize="@dimen/main_btn_txt"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/laptop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:text="@string/main_laptop"
+            android:textColor="@drawable/buttontext"
+            android:textSize="@dimen/main_btn_txt"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/contact"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:text="@string/main_contact"
+            android:textColor="@drawable/buttontext"
+            android:textSize="@dimen/main_btn_txt"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/feedback"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:text="@string/main_feedback"
+            android:textColor="@drawable/buttontext"
+            android:textSize="@dimen/main_btn_txt"
+            android:textStyle="bold" />
+	     <Button
+            android:id="@+id/article"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:text="@string/main_article"
+            android:textColor="@drawable/buttontext"
+            android:textSize="@dimen/main_btn_txt"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/credits"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:text="@string/main_credits"
+            android:textColor="@drawable/buttontext"
+            android:textSize="@dimen/main_btn_txt"
+            android:textStyle="bold" --> />
+    </LinearLayout>
+	
+</LinearLayout>

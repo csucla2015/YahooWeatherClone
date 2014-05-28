@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#99333333"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+   >
+
+    <RelativeLayout
+        android:id="@+id/bkheader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bruin_blue" >
+
+        
+
+        <ImageButton
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/bruin_blue"
+            android:contentDescription="@string/descr_logo"
+            android:src="@drawable/ucla_header" />
+
+        <ImageButton
+            android:id="@+id/clearText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/bruin_blue"
+            android:src="@drawable/clear_text"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+
+       
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/image2"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/bookinfotop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+	                android:orientation="vertical">
+            
+            <LinearLayout
+                android:id="@+id/bookInfo"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="#99333333"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/bookTitle"
+                android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:maxLines="5"
+                    android:textColor="@color/blue"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bookAuthor"
+                  android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:textColor="@color/light_gray"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/bookYear"
+                   android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/bookCover"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:layout_weight="3"
+                android:contentDescription="@string/descr_cover"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bookRecordBottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bookinfotop"
+            android:orientation="vertical"
+            android:padding="7dp" >
+
+            <ScrollView
+                android:id="@+id/ScrollView01"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp" >
+
+                    <TextView
+                          android:layout_width="fill_parent"
+       						 android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textSize="16dp"
+                        android:text="@string/bkrd_descript"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/navy"
+                        android:gravity="left"
+                        android:text="@string/empty"
+                        android:textSize="1dp" />
+
+                    <TableLayout
+                        android:id="@+id/description"
+                        
+                          android:background="#99333333"
+					    android:layout_width="fill_parent"
+					    android:layout_height="fill_parent"
+					    android:orientation="vertical"
+                        android:layout_marginTop="@dimen/bkrd_table_margin"
+                        android:shrinkColumns="0"
+                        android:stretchColumns="0" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+       					android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/bkrd_hdr_margin"
+                        android:gravity="left"
+                        android:text="@string/bkrd_avail"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/navy"
+                        android:gravity="left"
+                        android:text="@string/empty"
+                        android:textSize="1dp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" >
+
+                        <ProgressBar
+                            android:id="@+id/availprog"
+                            style="@android:style/Widget.ProgressBar.Small.Inverse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/bkrd_hdr_margin"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:id="@+id/availDescript"
+                        android:layout_width="fill_parent"
+                        android:background="#99333333"
+                        
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/bkrd_table_margin"
+                        android:shrinkColumns="0"
+                        android:stretchColumns="0" />
+
+                    <TextView
+                        android:id="@+id/reviews"
+                        android:layout_width="fill_parent"
+      				     android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/bkrd_hdr_margin"
+                        android:gravity="left"
+                        android:text="@string/bkrd_goodreads"
+                        android:textColor="@color/white"
+                        
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/navy"
+                        android:gravity="left"
+                        android:text="@string/empty"
+                        android:textSize="1dp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" >
+
+                        <ProgressBar
+                            android:id="@+id/reviewsprog"
+                            style="@android:style/Widget.ProgressBar.Small.Inverse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/bkrd_hdr_margin"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:id="@+id/reviewTable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/bkrd_table_margin"
+                        android:shrinkColumns="0"
+                        android:stretchColumns="0" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

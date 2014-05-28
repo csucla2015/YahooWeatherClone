@@ -4,9 +4,11 @@ import java.io.File;
 import com.jeremyfeinstein.slidingmenu.lib.*;
 
 
+
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
+import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -20,6 +22,11 @@ import android.widget.AbsListView.LayoutParams;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.ImageView;
 import android.widget.ListView;
+
+
+import android.widget.Switch;
+
+
 
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 
@@ -40,7 +47,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     private TabsPagerAdapter mAdapter;
 	private ActionBar actionBar;
 	
-	private String[] tabs = { "YRL", "Powell", "Mgmt" };
+	private String[] tabs = { "YRL", "Powell", "Mgmt", "Main" ,"Article"};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -160,7 +167,20 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 //		.beginTransaction()
 //		.replace(R.id.menu_frame, new SampleListFragment())
 //		.commit();
+        menu = new SlidingMenu(this);
+		menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
+		menu.setShadowWidthRes(R.dimen.shadow_width);
+		menu.setShadowDrawable(R.drawable.shadow);
+		menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+		menu.setFadeDegree(0.35f);
+		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+		menu.setMenu(R.layout.menu_frame);
+		getSupportFragmentManager()
+		.beginTransaction()
+		.replace(R.id.menu_frame, new SampleListFragment())
+		.commit();
 		
+		actionBar.hide();
 		actionBar.hide();
 
     }
@@ -192,4 +212,5 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     @Override
     public void onTabUnselected(Tab tab, FragmentTransaction ft) {
     }
+		
 }

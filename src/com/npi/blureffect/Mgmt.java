@@ -60,19 +60,19 @@ public class Mgmt extends Fragment{
 	        mList = (ListView) rootView.findViewById(R.id.list);
 	        mBlurredImage = (ImageView) rootView.findViewById(R.id.blurred_imagem);
 			mNormalImage = (ImageView) rootView.findViewById(R.id.normal_imagem);
-
+			rootView.setBackgroundResource(R.drawable.image3);
 			// Get the screen width
 			final int screenWidth = ImageUtils.getScreenWidth(getActivity());
 
 			// Try to find the blurred image
 			final File blurredImage = new File(getActivity().getFilesDir() + BLURRED_IMG_PATH);
-			Log.d(tg, "M: "+blurredImage.exists());
+			//Log.d(tg, "M: "+blurredImage.exists());
 			
 			if (!blurredImage.exists()) {
 
 				// launch the progressbar in ActionBar
 				getActivity().setProgressBarIndeterminateVisibility(true);
-				Log.d(tg, "M: if");
+				//Log.d(tg, "M: if");
 				new Thread(new Runnable() {
 
 					@Override
@@ -99,9 +99,9 @@ public class Mgmt extends Fragment{
 				}).start();
 
 			} else {
-
+				mNormalImage.setBackgroundResource(R.drawable.image3);
 				// The image has been found. Let's update the view
-				Log.d(tg, "M: else");
+				//Log.d(tg, "M: else");
 				updateView(screenWidth);
 
 			}
@@ -114,7 +114,30 @@ public class Mgmt extends Fragment{
 			headerView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, TOP_HEIGHT));
 			String[] strings = getResources().getStringArray(R.array.list_content);
 			strings[0]= "Hours : /n Monday : 7:30 am - 11:00 pm \n Tuesday : 7:30 am - 11:00 pm \n Wednesday : 7:30 am - 11:00 pm \n Thursday 7:30 am - 11:00 pm \n Friday 7:30 am - 11:00 pm";
-	        MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(getActivity(), strings);
+			String[] headers = new String[10];
+			headers[0] = "MGMT Library";
+			headers[2] = "Hours";
+			headers[4] = "Laptop Availability";
+			headers[6] = "Contact";
+			headers[8] = "Room Reservations";
+			strings[0] = "Open Now \nStudy Rooms Available : 9 \nLaptops Available : 10";
+			strings[2]= "Monday : 7:30 am - 11:00 pm \nTuesday : 7:30 am - 11:00 pm \nWednesday : 7:30 am - 11:00 pm \nThursday 7:30 am - 11:00 pm \nFriday 7:30 am - 11:00 pm";
+			strings[4] = "Laptops Not Available For Rent";
+			strings[6] = "(310) 825-3138";
+			strings[8] = "Under Construction";
+
+
+			headers[1] = "";
+			headers[3] = "";
+			headers[5] = "";
+			headers[7] = "";
+			headers[9] = "";
+			strings[1] = "";
+			strings[3]= "";
+			strings[5] = "";
+			strings[7] = "";
+			strings[9] = "";
+			MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(getActivity(), strings, headers);
 			mList.addHeaderView(headerView);
 			mList.setAdapter(adapter); 
 			mList.setOnScrollListener(new OnScrollListener() {

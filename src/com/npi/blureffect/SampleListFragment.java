@@ -20,13 +20,15 @@ public class SampleListFragment extends ListFragment {
 		super.onActivityCreated(savedInstanceState);
 		SampleAdapter adapter = new SampleAdapter(getActivity());
 		adapter.add(new SampleItem("Home", R.drawable.ic_menu_home));
-		adapter.add(new SampleItem("Course Reserves", R.drawable.ic_menu_copy_holo_light));
-		adapter.add(new SampleItem("Hours", R.drawable.ic_menu_recent_history));
+		adapter.add(new SampleItem("Powell", R.drawable.ic_menu_copy_holo_light));
+		adapter.add(new SampleItem("YRL", R.drawable.ic_menu_recent_history));
 		adapter.add(new SampleItem("Laptop Availability", R.drawable.ic_menu_help_holo_light));
 		adapter.add(new SampleItem("Contact", R.drawable.ic_menu_allfriends));
 		adapter.add(new SampleItem("Feedback", R.drawable.ic_menu_notifications));
 		adapter.add(new SampleItem("Credits", R.drawable.ic_menu_info_details));
 		adapter.add(new SampleItem("Article Search", R.drawable.ic_menu_info_details));
+		adapter.add(new SampleItem("Search", R.drawable.ic_menu_info_details));
+
 		setListAdapter(adapter);
 	}
 
