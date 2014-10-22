@@ -1,8 +1,12 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+<<<<<<< HEAD
     android:layout_height="match_parent"
     >
+=======
+    android:layout_height="match_parent">
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 
     <com.npi.blureffect.TopCenterImageView
         android:id="@+id/normal_imagep"
@@ -14,7 +18,10 @@
         android:id="@+id/blurred_imagep"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+<<<<<<< HEAD
         android:src="@drawable/image2"
+=======
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
         android:alpha="0"/>
 
     <ListView

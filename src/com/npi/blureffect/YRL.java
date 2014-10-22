@@ -1,5 +1,6 @@
 package com.npi.blureffect;
 
+<<<<<<< HEAD
 import java.io.BufferedReader;
 
 import java.io.File;
@@ -11,6 +12,12 @@ import java.io.UnsupportedEncodingException;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+=======
+import java.io.File;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.Display;
@@ -23,6 +30,7 @@ import android.widget.ListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.AbsListView.LayoutParams;
 import java.io.File;
+<<<<<<< HEAD
 import java.net.URI;
 import java.net.URL;
 import java.sql.Date;
@@ -45,17 +53,28 @@ import com.jeremyfeinstein.slidingmenu.lib.*;
 
 
 import android.annotation.SuppressLint;
+=======
+import com.jeremyfeinstein.slidingmenu.lib.*;
+
+
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.Activity;
 import android.app.FragmentTransaction;
+<<<<<<< HEAD
 import android.app.ProgressDialog;
+=======
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+<<<<<<< HEAD
 import android.text.format.DateFormat;
+=======
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -75,25 +94,37 @@ public class YRL extends Fragment{
 	private View headerView;
 	private static final int TOP_HEIGHT = 700;
 	private static final String tg = "nitin";
+<<<<<<< HEAD
 	boolean flag = true;
 	String newlink ="";
 	String newlink2 ="";
 	View rootView;
 	   @SuppressLint("NewApi")
 	@Override
+=======
+	View rootView;
+	   @Override
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 	    public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	            Bundle savedInstanceState) {
 		   
 		 
+<<<<<<< HEAD
 		   newlink = "http://webservices.library.ucla.edu/libservices/hours/unit/7";
 		   newlink2 = "http://webservices.library.ucla.edu/laptops/available/";
+=======
+	 
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 	        rootView = inflater.inflate(R.layout.fragment_yrl, container, false);
 	        
 	        
 	        mList = (ListView) rootView.findViewById(R.id.list);
 	        mBlurredImage = (ImageView) rootView.findViewById(R.id.blurred_imagey);
 			mNormalImage = (ImageView) rootView.findViewById(R.id.normal_imagey);
+<<<<<<< HEAD
 			
+=======
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 
 			// Get the screen width
 			final int screenWidth = ImageUtils.getScreenWidth(getActivity());
@@ -101,13 +132,21 @@ public class YRL extends Fragment{
 	
 			// Try to find the blurred image
 			final File blurredImage = new File(getActivity().getFilesDir() + BLURRED_IMG_PATH);
+<<<<<<< HEAD
 			//Log.d(tg, "Y "+blurredImage.exists());
+=======
+			Log.d(tg, "Y "+blurredImage.exists());
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 			
 			if (!blurredImage.exists()) {
 
 				// launch the progressbar in ActionBar
 				getActivity().setProgressBarIndeterminateVisibility(true);
+<<<<<<< HEAD
 				//Log.d(tg, "Y: if");
+=======
+				Log.d(tg, "Y: if");
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 				new Thread(new Runnable() {
 
 					@Override
@@ -134,10 +173,16 @@ public class YRL extends Fragment{
 				}).start();
 
 			} else {
+<<<<<<< HEAD
 				mNormalImage.setBackgroundResource(R.drawable.image);
 				
 				// The image has been found. Let's update the view
 				//Log.d(tg, "Y: else");
+=======
+
+				// The image has been found. Let's update the view
+				Log.d(tg, "Y: else");
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 				updateView(screenWidth);
 
 			}
@@ -149,6 +194,7 @@ public class YRL extends Fragment{
 		
 			headerView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, TOP_HEIGHT));
 			String[] strings = getResources().getStringArray(R.array.list_content);
+<<<<<<< HEAD
 			
 
 			
@@ -185,10 +231,16 @@ public class YRL extends Fragment{
 			//strings[0]= "Hours : /n Monday : 7:30 am - 11:00 pm \n Tuesday : 7:30 am - 11:00 pm \n Wednesday : 7:30 am - 11:00 pm \n Thursday 7:30 am - 11:00 pm \n Friday 7:30 am - 11:00 pm";
 			String[] headers = new String[10];
 			headers[0] = "YRL Library";
+=======
+			strings[0]= "Hours : /n Monday : 7:30 am - 11:00 pm \n Tuesday : 7:30 am - 11:00 pm \n Wednesday : 7:30 am - 11:00 pm \n Thursday 7:30 am - 11:00 pm \n Friday 7:30 am - 11:00 pm";
+			String[] headers = new String[10];
+			headers[0] = "Powell Library";
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 			headers[2] = "Hours";
 			headers[4] = "Laptop Availability";
 			headers[6] = "Contact";
 			headers[8] = "Room Reservations";
+<<<<<<< HEAD
 			
 			if (j.charAt(0) == 'Y')
 				strings[0] = "Open Now \nStudy Rooms Available : 9 \nLaptops Available : "+j1;
@@ -198,6 +250,12 @@ public class YRL extends Fragment{
 			strings[2]= j;//"Monday : 7:30 am - 11:00 pm \nTuesday : 7:30 am - 11:00 pm \nWednesday : 7:30 am - 11:00 pm \nThursday 7:30 am - 11:00 pm \nFriday 7:30 am - 11:00 pm";
 			strings[4] = "Total Laptops Available = "+j1;
 			strings[6] = "310.825.4732";
+=======
+			strings[0] = "Open Now \nStudy Rooms Available : 9 \nLaptops Available : 10";
+			strings[2]= "Monday : 7:30 am - 11:00 pm \nTuesday : 7:30 am - 11:00 pm \nWednesday : 7:30 am - 11:00 pm \nThursday 7:30 am - 11:00 pm \nFriday 7:30 am - 11:00 pm";
+			strings[4] = "Total Laptops Available = 10";
+			strings[6] = "Under Construction";
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 			strings[8] = "Under Construction";
 
 
@@ -264,6 +322,7 @@ public class YRL extends Fragment{
 
 			//mBlurredImageHeader.setoriginalImage(bmpBlurred);
 		}
+<<<<<<< HEAD
 	   
 	   
 	   
@@ -513,5 +572,7 @@ public class YRL extends Fragment{
 	}
 
 	
+=======
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 
 }

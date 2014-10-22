@@ -47,7 +47,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     private TabsPagerAdapter mAdapter;
 	private ActionBar actionBar;
 	
+<<<<<<< HEAD
 	private String[] tabs = { "YRL", "Powell", "Mgmt", "Main" ,"Article"};
+=======
+	private String[] tabs = { "YRL", "Powell", "Mgmt" };
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -167,6 +171,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 //		.beginTransaction()
 //		.replace(R.id.menu_frame, new SampleListFragment())
 //		.commit();
+<<<<<<< HEAD
         menu = new SlidingMenu(this);
 		menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
 		menu.setShadowWidthRes(R.dimen.shadow_width);
@@ -182,6 +187,10 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		
 		actionBar.hide();
 		actionBar.hide();
+=======
+		
+		actionBar.hide();
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 
     }
  

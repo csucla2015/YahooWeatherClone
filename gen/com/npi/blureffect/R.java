@@ -160,6 +160,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int slidingmenu_offset=0x7f070009;
     }
     public static final class drawable {
+<<<<<<< HEAD
         public static final int arrow=0x7f020000;
         public static final int arrows=0x7f020001;
         public static final int back=0x7f020002;
@@ -292,12 +293,57 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int titleButton=0x7f04001b;
         public static final int txt1=0x7f04003c;
         public static final int txt2=0x7f04003d;
+=======
+        public static final int header=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int ic_menu_allfriends=0x7f020002;
+        public static final int ic_menu_copy_holo_light=0x7f020003;
+        public static final int ic_menu_help_holo_light=0x7f020004;
+        public static final int ic_menu_home=0x7f020005;
+        public static final int ic_menu_info_details=0x7f020006;
+        public static final int ic_menu_notifications=0x7f020007;
+        public static final int ic_menu_recent_history=0x7f020008;
+        public static final int image=0x7f020009;
+        public static final int image2=0x7f02000a;
+        public static final int image3=0x7f02000b;
+        public static final int shadow=0x7f02000c;
+    }
+    public static final class id {
+        public static final int RelativeLayout01=0x7f040016;
+        public static final int availableIcon=0x7f040018;
+        public static final int blurred_image_header=0x7f04000a;
+        public static final int blurred_imagem=0x7f040008;
+        public static final int blurred_imagep=0x7f04000c;
+        public static final int blurred_imagey=0x7f04000e;
+        public static final int book_year=0x7f040019;
+        public static final int fullscreen=0x7f040003;
+        public static final int left=0x7f040000;
+        public static final int linearLayout1=0x7f04000f;
+        public static final int linear_layout=0x7f040015;
+        public static final int list=0x7f040009;
+        public static final int list_value=0x7f040017;
+        public static final int margin=0x7f040002;
+        public static final int menu_frame=0x7f040014;
+        public static final int none=0x7f040004;
+        public static final int normal_imagem=0x7f040007;
+        public static final int normal_imagep=0x7f04000b;
+        public static final int normal_imagey=0x7f04000d;
+        public static final int pager=0x7f040006;
+        public static final int right=0x7f040001;
+        public static final int selected_view=0x7f040005;
+        public static final int slidingmenumain=0x7f04001a;
+        public static final int textView1=0x7f040013;
+        public static final int textView2=0x7f040010;
+        public static final int textView3=0x7f040011;
+        public static final int textView4=0x7f040012;
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
     }
     public static final class integer {
         public static final int num_cols=0x7f080000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+<<<<<<< HEAD
         public static final int articlerecord=0x7f030001;
         public static final int articles=0x7f030002;
         public static final int articlesearch=0x7f030003;
@@ -355,6 +401,20 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int result_subject=0x7f090013;
         public static final int result_title=0x7f090011;
         public static final int title_activity_menu=0x7f09001c;
+=======
+        public static final int fragment_mgmt=0x7f030001;
+        public static final int fragment_powell=0x7f030002;
+        public static final int fragment_yrl=0x7f030003;
+        public static final int list=0x7f030004;
+        public static final int list_item=0x7f030005;
+        public static final int menu_frame=0x7f030006;
+        public static final int row=0x7f030007;
+        public static final int slidingmenumain=0x7f030008;
+    }
+    public static final class string {
+        public static final int app_name=0x7f090000;
+        public static final int empty=0x7f090001;
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
     }
     public static final class style {
         /** 
@@ -369,6 +429,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     
  API 14 theme customizations can go here. 
          */
+<<<<<<< HEAD
         public static final int AppBaseTheme=0x7f0a0004;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
@@ -382,6 +443,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     
          */
         public static final int LightThemeSelector=0x7f0a0000;
+=======
+        public static final int AppBaseTheme=0x7f0a0000;
+        /**  Application theme. 
+ All customizations that are NOT specific to a particular API-level can go here. 
+         */
+        public static final int AppTheme=0x7f0a0001;
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
     }
     public static final class styleable {
         /** Attributes that can be used with a SlidingMenu.

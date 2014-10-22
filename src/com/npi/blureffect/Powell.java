@@ -59,13 +59,18 @@ public class Powell extends Fragment{
 	        mList = (ListView) rootView.findViewById(R.id.list);
 	        mBlurredImage = (ImageView) rootView.findViewById(R.id.blurred_imagep);
 			mNormalImage = (ImageView) rootView.findViewById(R.id.normal_imagep);
+<<<<<<< HEAD
 			
+=======
+		
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 			// Get the screen width
 			final int screenWidth = ImageUtils.getScreenWidth(getActivity());
 
 	
 			// Try to find the blurred image
 			final File blurredImage = new File(getActivity().getFilesDir() + BLURRED_IMG_PATH);
+<<<<<<< HEAD
 			//Log.d(tg, "P "+blurredImage.exists());
 			
 			if (!blurredImage.exists()) {
@@ -73,6 +78,15 @@ public class Powell extends Fragment{
 				// launch the progressbar in ActionBar
 				getActivity().setProgressBarIndeterminateVisibility(true);
 				//Log.d(tg, "P :if");
+=======
+			Log.d(tg, "P "+blurredImage.exists());
+			
+/*			if (!blurredImage.exists()) {
+
+				// launch the progressbar in ActionBar
+				getActivity().setProgressBarIndeterminateVisibility(true);
+				Log.d(tg, "P :if");
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 				new Thread(new Runnable() {
 
 					@Override
@@ -99,12 +113,50 @@ public class Powell extends Fragment{
 				}).start();
 
 			} else {
+<<<<<<< HEAD
 				mNormalImage.setBackgroundResource(R.drawable.image2);
 				// The image has been found. Let's update the view
 				//Log.d(tg, "P:else");
 				updateView(screenWidth);
 
 			}
+=======
+
+				// The image has been found. Let's update the view
+				Log.d(tg, "P:else");
+				updateView(screenWidth);
+
+			}
+*/
+
+			// launch the progressbar in ActionBar
+			getActivity().setProgressBarIndeterminateVisibility(true);
+			Log.d(tg, "P :if");
+			new Thread(new Runnable() {
+
+				@Override
+				public void run() {
+
+					// No image found => let's generate it!
+					BitmapFactory.Options options = new BitmapFactory.Options();
+					options.inSampleSize = 2;
+					Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.image2, options);
+					Bitmap newImg = Blur.fastblur(getActivity(), image, 7);
+					ImageUtils.storeImage(newImg, blurredImage);
+					getActivity().runOnUiThread(new Runnable() {
+
+						@Override
+						public void run() {
+							updateView(screenWidth);
+
+							// And finally stop the progressbar
+							getActivity().setProgressBarIndeterminateVisibility(true);
+						}
+					});
+
+				}
+			}).start();
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 
 			headerView = new View(getActivity());
 			headerView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, TOP_HEIGHT));
@@ -119,7 +171,11 @@ public class Powell extends Fragment{
 			strings[0] = "Open Now \nStudy Rooms Available : 9 \nLaptops Available : 10";
 			strings[2]= "Monday : 7:30 am - 11:00 pm \nTuesday : 7:30 am - 11:00 pm \nWednesday : 7:30 am - 11:00 pm \nThursday 7:30 am - 11:00 pm \nFriday 7:30 am - 11:00 pm";
 			strings[4] = "Total Laptops Available = 10";
+<<<<<<< HEAD
 			strings[6] = "310.825.9389";
+=======
+			strings[6] = "Under Construction";
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 			strings[8] = "Under Construction";
 
 

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
+<<<<<<< HEAD
     <issue id="ResourceAsColor">
         <ignore path="src/com/npi/blureffect/BookRecord.java" />
     </issue>
+=======
+>>>>>>> 5bee727d8bb8a4ad0e2700855828786b04839b65
 </lint>
